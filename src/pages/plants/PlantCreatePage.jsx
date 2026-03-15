@@ -8,7 +8,7 @@ import PageLayout from "../../layouts/PageLayout";
 import FormSectionCard from "../../ui/organisms/FormSectionCard";
 
 import TextField from "../../ui/molecules/TextField";
-import NumberField from "../../ui/molecules/Numberfield";
+import NumberField from "../../ui/molecules/NumberField";
 import DateField from "../../ui/molecules/DateField";
 import SelectField from "../../ui/molecules/SelectField";
 import CurrencyField from "../../ui/molecules/CurrencyField";
@@ -92,7 +92,6 @@ export const PlantCreatePage = () => {
         >
           {({ isSubmitting, setFieldValue, values }) => (
             <Form className="bb-form">
-
               {/* CORE INFORMATION */}
               <FormSectionCard title="Core Information" dense>
                 <div className="bb-grid">
@@ -119,9 +118,7 @@ export const PlantCreatePage = () => {
                     name="commissioning_date"
                     label="Commissioning Date"
                     value={values.commissioning_date}
-                    onChange={(val) =>
-                      setFieldValue("commissioning_date", val)
-                    }
+                    onChange={(val) => setFieldValue("commissioning_date", val)}
                   />
                 </div>
               </FormSectionCard>
@@ -137,9 +134,7 @@ export const PlantCreatePage = () => {
                     name="location"
                     label="Location"
                     value={values.location}
-                    onChange={(e) =>
-                      setFieldValue("location", e.target.value)
-                    }
+                    onChange={(e) => setFieldValue("location", e.target.value)}
                   />
                   <NumberField
                     name="latitude"
@@ -202,7 +197,6 @@ export const PlantCreatePage = () => {
                   </button>
                 </div>
               </div>
-
             </Form>
           )}
         </Formik>
