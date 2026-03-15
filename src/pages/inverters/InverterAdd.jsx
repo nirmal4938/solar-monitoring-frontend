@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import PageLayout from "../../layouts/PageLayout";
 import FormSectionCard from "../../ui/organisms/FormSectionCard";
 import TextField from "../../ui/molecules/TextField";
-import NumberField from "../../ui/molecules/Numberfield";
+import NumberField from "../../ui/molecules/NumberField";
 import SelectField from "../../ui/molecules/SelectField";
 import DateField from "../../ui/molecules/DateField";
 import { useEditInverters } from "../../hooks/useEditInverters";

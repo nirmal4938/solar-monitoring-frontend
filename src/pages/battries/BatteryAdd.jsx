@@ -7,7 +7,7 @@ import PageLayout from "../../layouts/PageLayout";
 import FormSectionCard from "../../ui/organisms/FormSectionCard";
 
 import TextField from "../../ui/molecules/TextField";
-import NumberField from "../../ui/molecules/Numberfield";
+import NumberField from "../../ui/molecules/NumberField";
 import DateField from "../../ui/molecules/DateField";
 import SelectField from "../../ui/molecules/SelectField";
 
@@ -64,21 +64,19 @@ const STATUS_OPTIONS = [
   { label: "CHARGING", value: "CHARGING" },
   { label: "DISCHARGING", value: "DISCHARGING" },
   { label: "FAULT", value: "FAULT" },
-  { label: "OFFLINE", value: "OFFLINE" }
+  { label: "OFFLINE", value: "OFFLINE" },
 ];
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Battery name is required"),
   capacity_kwh: Yup.number().required().positive(),
-  usable_capacity_kwh: Yup.number()
-    .positive()
-    .max(Yup.ref("capacity_kwh")),
+  usable_capacity_kwh: Yup.number().positive().max(Yup.ref("capacity_kwh")),
   max_charge_kw: Yup.number().nullable(),
   max_discharge_kw: Yup.number().nullable(),
   round_trip_efficiency_pct: Yup.number().min(0).max(100),
   depth_of_discharge_pct: Yup.number().min(0).max(100),
   status: Yup.string().required(),
-  commissioning_date: Yup.date().required()
+  commissioning_date: Yup.date().required(),
 });
 
 /* --------------------------------------------------- */
@@ -86,7 +84,6 @@ const validationSchema = Yup.object({
 /* --------------------------------------------------- */
 
 export const BatteryAdd = () => {
-
   const navigate = useNavigate();
   const { id: batteryId } = useParams();
 
@@ -98,7 +95,6 @@ export const BatteryAdd = () => {
   /* --------------------------------------------------- */
 
   const initialValues = useMemo(() => {
-
     const empty = {
       name: "",
       capacity_kwh: null,
@@ -110,7 +106,7 @@ export const BatteryAdd = () => {
       soc_percent: null,
       health_pct: null,
       status: "",
-      commissioning_date: null
+      commissioning_date: null,
     };
 
     if (!batteryId || !batteryDetails?.battery) return empty;
@@ -130,9 +126,8 @@ export const BatteryAdd = () => {
       status: b?.status ?? "",
       commissioning_date: b?.commissioningDate
         ? new Date(b.commissioningDate)
-        : null
+        : null,
     };
-
   }, [batteryId, batteryDetails]);
 
   /* --------------------------------------------------- */
@@ -140,7 +135,6 @@ export const BatteryAdd = () => {
   /* --------------------------------------------------- */
 
   const handleSubmit = async (values, { setSubmitting }) => {
-
     const payload = { battery: values };
 
     try {
@@ -166,7 +160,6 @@ export const BatteryAdd = () => {
   return (
     <PageLayout>
       <div className="bb-page">
-
         <Formik
           enableReinitialize
           validateOnMount
@@ -174,22 +167,15 @@ export const BatteryAdd = () => {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
-
           {({ isSubmitting, values, errors }) => (
-
             <Form className="bb-form">
               {/* CORE INFO */}
 
               <FormSectionCard title="Core Information" dense>
-
                 <div className="bb-grid">
-
                   <FText name="name" label="Battery Name" />
 
-                  <FNumber
-                    name="capacity_kwh"
-                    label="Total Capacity (kWh)"
-                  />
+                  <FNumber name="capacity_kwh" label="Total Capacity (kWh)" />
 
                   <FNumber
                     name="usable_capacity_kwh"
@@ -202,23 +188,19 @@ export const BatteryAdd = () => {
                     options={STATUS_OPTIONS}
                   />
 
-                  <FDate
-                    name="commissioning_date"
-                    label="Commissioning Date"
-                  />
-
+                  <FDate name="commissioning_date" label="Commissioning Date" />
                 </div>
-
               </FormSectionCard>
 
               {/* SPECIFICATIONS */}
 
               <FormSectionCard title="Battery Specifications" dense>
-
                 <div className="bb-grid">
-
                   <FNumber name="max_charge_kw" label="Max Charge Power (kW)" />
-                  <FNumber name="max_discharge_kw" label="Max Discharge Power (kW)" />
+                  <FNumber
+                    name="max_discharge_kw"
+                    label="Max Discharge Power (kW)"
+                  />
 
                   <FNumber
                     name="round_trip_efficiency_pct"
@@ -233,110 +215,103 @@ export const BatteryAdd = () => {
                   <FNumber name="soc_percent" label="State of Charge (%)" />
 
                   <FNumber name="health_pct" label="Battery Health (%)" />
-
                 </div>
-
               </FormSectionCard>
 
               {/* FOOTER */}
 
-<div
-  style={{
-    position: "sticky",
-    bottom: -30,
-    left: 0,
-    width: "100%",
-    background: "#ffffff",
-    borderTop: "1px solid #e5e7eb",
-    padding: "18px 28px",
-    zIndex: 1000,
-    boxShadow: "0 -6px 20px rgba(0,0,0,0.08)"
-  }}
->
-  <div
-    style={{
-      maxWidth: "1400px",
-      margin: "0 auto",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      flexWrap: "wrap",
-      gap: "16px"
-    }}
-  >
-    
-    {/* Left section - form helper */}
-    <div
-      style={{
-        fontSize: "14px",
-        color: "#6b7280",
-        fontWeight: 500
-      }}
-    >
-      {batteryId
-        ? "Update battery configuration and save changes."
-        : "Create a new battery configuration."}
-    </div>
+              <div
+                style={{
+                  position: "sticky",
+                  bottom: -30,
+                  left: 0,
+                  width: "100%",
+                  background: "#ffffff",
+                  borderTop: "1px solid #e5e7eb",
+                  padding: "18px 28px",
+                  zIndex: 1000,
+                  boxShadow: "0 -6px 20px rgba(0,0,0,0.08)",
+                }}
+              >
+                <div
+                  style={{
+                    maxWidth: "1400px",
+                    margin: "0 auto",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    flexWrap: "wrap",
+                    gap: "16px",
+                  }}
+                >
+                  {/* Left section - form helper */}
+                  <div
+                    style={{
+                      fontSize: "14px",
+                      color: "#6b7280",
+                      fontWeight: 500,
+                    }}
+                  >
+                    {batteryId
+                      ? "Update battery configuration and save changes."
+                      : "Create a new battery configuration."}
+                  </div>
 
-    {/* Right section - actions */}
-    <div
-      style={{
-        display: "flex",
-        gap: "12px",
-        alignItems: "center"
-      }}
-    >
-      <button
-        type="button"
-        onClick={() => navigate("/batteries")}
-        style={{
-          padding: "10px 18px",
-          fontSize: "14px",
-          fontWeight: 500,
-          border: "1px solid #d1d5db",
-          borderRadius: "8px",
-          background: "#ffffff",
-          color: "#374151",
-          cursor: "pointer",
-          transition: "all 0.2s ease"
-        }}
-      >
-        Cancel
-      </button>
+                  {/* Right section - actions */}
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "12px",
+                      alignItems: "center",
+                    }}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => navigate("/batteries")}
+                      style={{
+                        padding: "10px 18px",
+                        fontSize: "14px",
+                        fontWeight: 500,
+                        border: "1px solid #d1d5db",
+                        borderRadius: "8px",
+                        background: "#ffffff",
+                        color: "#374151",
+                        cursor: "pointer",
+                        transition: "all 0.2s ease",
+                      }}
+                    >
+                      Cancel
+                    </button>
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        style={{
-          padding: "10px 22px",
-          fontSize: "14px",
-          fontWeight: 600,
-          border: "none",
-          borderRadius: "8px",
-          background: "#1e40af",
-          color: "#ffffff",
-          cursor: isSubmitting ? "not-allowed" : "pointer",
-          opacity: isSubmitting ? 0.7 : 1,
-          boxShadow: "0 2px 8px rgba(30,64,175,0.35)",
-          transition: "all 0.2s ease"
-        }}
-      >
-        {isSubmitting
-          ? "Saving..."
-          : batteryId
-          ? "Update Battery"
-          : "Create Battery"}
-      </button>
-    </div>
-  </div>
-</div>
-
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      style={{
+                        padding: "10px 22px",
+                        fontSize: "14px",
+                        fontWeight: 600,
+                        border: "none",
+                        borderRadius: "8px",
+                        background: "#1e40af",
+                        color: "#ffffff",
+                        cursor: isSubmitting ? "not-allowed" : "pointer",
+                        opacity: isSubmitting ? 0.7 : 1,
+                        boxShadow: "0 2px 8px rgba(30,64,175,0.35)",
+                        transition: "all 0.2s ease",
+                      }}
+                    >
+                      {isSubmitting
+                        ? "Saving..."
+                        : batteryId
+                          ? "Update Battery"
+                          : "Create Battery"}
+                    </button>
+                  </div>
+                </div>
+              </div>
             </Form>
-
           )}
-
         </Formik>
-
       </div>
     </PageLayout>
   );
