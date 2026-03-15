@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
@@ -16,7 +16,7 @@ axiosInstance.interceptors.request.use(
     }
     return config;
   },
-  (error) => Promise.reject(error)
+  (error) => Promise.reject(error),
 );
 
 // Handle 401 globally
@@ -28,7 +28,7 @@ axiosInstance.interceptors.response.use(
       window.location.href = "/login";
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 export default axiosInstance;
