@@ -1,0 +1,86 @@
+/* =========================================
+   EXECUTIVE TREND CONTAINER
+   ========================================= */
+
+.pi-trend-container {
+  margin-top: 10px;
+}
+
+/* ================= HEADER ================= */
+
+.pi-trend-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.pi-trend-title {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin: 0;
+  color: #111827;
+}
+
+.pi-trend-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.pi-trend-range {
+  background: #111827;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+/* ================= KPI STRIP ================= */
+
+.pi-trend-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.pi-trend-kpi {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.pi-trend-kpi-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.pi-trend-kpi-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ================= CHART CARD ================= */
+
+.pi-trend-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* ================= EMPTY STATE ================= */
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+}

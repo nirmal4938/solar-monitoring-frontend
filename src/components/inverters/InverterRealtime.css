@@ -1,0 +1,41 @@
+.section-title {
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.inv-table {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inv-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr repeat(3, 1fr);
+  align-items: center;
+  background: #161b22;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.inv-name { font-weight: 600; }
+.inv-model { font-size: 12px; opacity: 0.6; }
+
+.status {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.ON { color: #00c853; }
+.status.FAULT { color: #ff5252; }
+.status.OFF { color: #ffb300; }
+
+.metric-label {
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.metric-value {
+  font-weight: 500;
+}

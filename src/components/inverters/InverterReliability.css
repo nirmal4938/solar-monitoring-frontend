@@ -1,0 +1,9 @@
+.rel-row {
+  display: grid;
+  grid-template-columns: 2fr repeat(3,1fr);
+  padding: 12px;
+  background: #161b22;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  font-size: 13px;
+}

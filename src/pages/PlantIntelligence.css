@@ -1,0 +1,89 @@
+/* ======================================================
+   BLOOMBERG LIGHT – PLANT INTELLIGENCE SYSTEM
+====================================================== */
+
+.plant-intelligence-container {
+  padding: 32px;
+  background: #f4f6f9;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ================= LOADING ================= */
+
+.loading-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 14px;
+  border: 1px solid #e6e9ef;
+  text-align: center;
+  color: #6b7280;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+/* ================= SECTION ================= */
+
+.pi-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ================= SECTION HEADER ================= */
+
+.pi-section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-left: 14px;
+  border-left: 4px solid #2563eb;
+}
+
+.pi-section-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Accent Variants */
+
+.pi-section-header.finance {
+  border-color: #16a34a;
+}
+
+.pi-section-header.ai {
+  border-color: #f59e0b;
+}
+
+.pi-section-header.carbon {
+  border-color: #059669;
+}
+
+/* ================= GLOBAL CARD REFINEMENT ================= */
+
+.card,
+.plant-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e6e9ef;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.card:hover,
+.plant-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .plant-intelligence-container {
+    padding: 20px;
+  }
+}

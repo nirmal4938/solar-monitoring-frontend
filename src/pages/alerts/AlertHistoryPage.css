@@ -1,0 +1,41 @@
+/* TOP BAR */
+
+.alert-topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.alert-actions-right{
+  display:flex;
+  gap:8px;
+}
+
+/* FILTERS */
+
+.alert-filters{
+  display:flex;
+  gap:10px;
+  margin-bottom:12px;
+}
+
+.alert-filters .p-inputtext{
+  width:260px;
+}
+
+/* TABLE WRAPPER */
+
+.bb-table-wrapper{
+  border:1px solid #e5e7eb;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+/* ACTION BUTTONS */
+
+.alert-actions{
+  display:flex;
+  justify-content:center;
+  gap:6px;
+}

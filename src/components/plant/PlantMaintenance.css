@@ -1,0 +1,95 @@
+/* =========================================
+   EXECUTIVE MAP CARD
+   ========================================= */
+
+.pi-map-card {
+  background: #ffffff;
+  border: 1px solid #e6e9ef;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* ================= HEADER ================= */
+
+.pi-map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.pi-map-title {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #111827;
+  margin: 0;
+}
+
+.pi-map-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 4px 0 0 0;
+}
+
+.pi-map-badge {
+  background: #111827;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* ================= MAP ================= */
+
+.pi-map-container {
+  height: 420px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* =========================================
+   POPUP STYLING (BLOOMBERG STYLE)
+   ========================================= */
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.pi-popup-card {
+  min-width: 220px;
+  font-family: inherit;
+}
+
+.pi-popup-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: #111827;
+}
+
+.pi-popup-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 14px;
+  font-size: 13px;
+}
+
+.pi-popup-grid span:nth-child(odd) {
+  color: #6b7280;
+}
+
+.pi-popup-grid span:nth-child(even) {
+  font-weight: 600;
+  color: #111827;
+}
+
+.pi-popup-score {
+  font-weight: 700;
+}

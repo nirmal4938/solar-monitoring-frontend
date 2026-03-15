@@ -1,0 +1,75 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Bloomberg Light Base */
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f4f6f8;   /* Soft enterprise grey */
+  color: #1f2937;              /* Professional dark grey */
+  font-size: 14px;
+}
+
+/* Typography hierarchy */
+h1 { font-size: 22px; font-weight: 600; margin: 0; }
+h2 { font-size: 18px; font-weight: 600; margin: 0; }
+h3 { font-size: 15px; font-weight: 500; margin: 0; }
+
+a {
+  text-decoration: none;
+  color: #1f2937;
+}
+
+/* Bloomberg Accent */
+.text-accent {
+  color: #2563eb; /* subtle financial blue */
+}
+
+/* Card Styling */
+.enterprise-card {
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  padding: 1.5rem;
+}
+
+
+/* Remove center alignment */
+body {
+  display: block;
+}
+/* Custom CTA Button using PrimeFlex CSS variables */
+.CTA-Button {
+  background-color: var(--gray-800); /* PrimeFlex variable */
+  color: #ffffff;
+  border: 1px solid var(--blue-800);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+
+
+/* Hover effect */
+.CTA-Button:hover {
+  background-color: var(--blue-900);
+  border-color: var(--blue-900);
+  color: #ffffff;
+}
+
+/* Optional: active / focus states */
+.CTA-Button:active,
+.CTA-Button:focus {
+  background-color: var(--blue-700);
+  border-color: var(--blue-700);
+  color: #ffffff;
+}
+.p-input-icon-left .pi.pi-search {
+  float: right;
+  right: 10px !important;
+}

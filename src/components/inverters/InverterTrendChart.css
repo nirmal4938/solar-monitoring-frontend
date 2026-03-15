@@ -1,0 +1,12 @@
+.trend-grid {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 140px;
+}
+
+.bar {
+  flex: 1;
+  background: linear-gradient(to top, #00c853, #66ffa6);
+  border-radius: 4px 4px 0 0;
+}

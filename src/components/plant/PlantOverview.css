@@ -1,0 +1,154 @@
+/* ======================================================
+   BLOOMBERG LIGHT – PLANT PORTFOLIO OVERVIEW
+====================================================== */
+
+.plant-container {
+  padding: 30px;
+  background: #f4f6f9;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ================= GENERAL CARD ================= */
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e6e9ef;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= HEADER ================= */
+
+.header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ================= GRID ================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* ================= STAT CARD ================= */
+
+.stat-card {
+  text-align: left;
+}
+
+.label {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ================= BADGES ================= */
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.success {
+  background: #e6f9f0;
+  color: #059669;
+}
+
+.danger {
+  background: #fde8e8;
+  color: #dc2626;
+}
+
+.executive {
+  background: #eef2ff;
+  color: #3730a3;
+  border: 1px solid #e0e7ff;
+}
+
+/* ================= VALUE STATES ================= */
+
+.positive {
+  color: #059669;
+}
+
+.danger {
+  color: #dc2626;
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* ================= METRIC CARD ================= */
+
+.metric-card {
+  background: #f9fafb;
+}
+
+/* ================= PROGRESS BAR ================= */
+
+.progress-bar {
+  margin-top: 12px;
+  height: 8px;
+  width: 100%;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  transition: width 0.4s ease;
+}
+
+/* ================= EMPTY STATE ================= */
+
+.empty-state {
+  text-align: center;
+  color: #6b7280;
+}

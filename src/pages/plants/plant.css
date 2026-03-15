@@ -1,0 +1,158 @@
+/* ========================================
+   Bloomberg Enterprise Action System
+========================================= */
+
+/* Wrapper */
+.enterprise-action-wrapper {
+  min-height: 40px;
+}
+
+/* Divider before destructive action */
+.enterprise-action-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255,255,255,0.08);
+}
+
+/* Base Button Styling */
+.enterprise-action-btn,
+.enterprise-action-btn-delete {
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  transition: all 0.15s ease;
+}
+
+/* Icon Base Color */
+.enterprise-action-btn .p-button-icon {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  transition: color 0.15s ease;
+}
+
+/* Hover Surface */
+.enterprise-action-btn:hover {
+  background: rgba(255,255,255,0.06) !important;
+}
+
+.enterprise-action-btn:hover .p-button-icon {
+  color: #f3f4f6;
+}
+
+/* Delete Neutral */
+.enterprise-action-btn-delete .p-button-icon {
+  font-size: 0.85rem;
+  color: #6b7280;
+  transition: all 0.15s ease;
+}
+
+/* Delete Hover */
+.enterprise-action-btn-delete:hover {
+  background: rgba(220,38,38,0.12) !important;
+}
+
+.enterprise-action-btn-delete:hover .p-button-icon {
+  color: #ef4444;
+}
+
+/* Focus Accessibility */
+.enterprise-action-btn:focus,
+.enterprise-action-btn-delete:focus {
+  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.6) !important;
+}
+
+
+
+/* create plant page */
+/* =========================================
+   BLOOMBERG LIGHT ENTERPRISE THEME
+========================================= */
+
+.enterprise-page {
+  background: #f3f4f6;
+  min-height: 100vh;
+  padding: 2rem 2.5rem;
+}
+
+/* Header */
+.enterprise-header-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: 0.2px;
+}
+
+.enterprise-header-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* Section Card */
+.enterprise-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+/* Section Title */
+.enterprise-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* Labels */
+.enterprise-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Prime Input Refinement */
+.p-inputtext,
+.p-dropdown,
+.p-calendar,
+.p-inputnumber {
+  border-radius: 4px !important;
+  border: 1px solid #d1d5db !important;
+}
+
+.p-inputtext:focus,
+.p-dropdown:focus,
+.p-calendar:focus,
+.p-inputnumber:focus {
+  box-shadow: 0 0 0 1px #111827 !important;
+  border-color: #111827 !important;
+}
+
+/* Action Bar */
+.enterprise-action-bar {
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  padding: 1.25rem 2rem;
+  margin-top: 2rem;
+}
+
+/* Primary Button */
+.enterprise-primary-btn {
+  background: #111827 !important;
+  border: 1px solid #111827 !important;
+}
+
+.enterprise-primary-btn:hover {
+  background: #000000 !important;
+}
+
+/* Secondary */
+.enterprise-secondary-btn {
+  border: 1px solid #d1d5db !important;
+  background: #ffffff !important;
+}

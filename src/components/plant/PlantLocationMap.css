@@ -1,0 +1,150 @@
+/* ======================================================
+   🌍 Bloomberg Light Theme - Portfolio Map
+   Clean • Institutional • Enterprise Grade
+====================================================== */
+
+.map-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 24px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+/* ================= HEADER ================= */
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.map-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.map-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.map-badge {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #111827;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* ================= MAP CONTAINER ================= */
+
+.map-wrapper {
+  height: 440px; /* critical */
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.leaflet-map {
+  height: 100%;
+  width: 100%;
+  font-family: inherit;
+}
+
+/* ================= EMPTY STATE ================= */
+
+.map-empty {
+  padding: 80px 20px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* ======================================================
+   🗺 Leaflet Light Overrides
+====================================================== */
+
+.leaflet-container {
+  background: #f9fafb;
+}
+
+.leaflet-control-zoom a {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #111827;
+  font-weight: 600;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #f3f4f6;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.leaflet-popup-tip {
+  background: #ffffff;
+}
+
+/* ======================================================
+   📊 Popup Card Styling
+====================================================== */
+
+.popup-card {
+  min-width: 220px;
+}
+
+.popup-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.popup-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px 18px;
+  font-size: 13px;
+}
+
+.popup-grid span:nth-child(odd) {
+  color: #6b7280;
+}
+
+.popup-grid span:nth-child(even) {
+  color: #111827;
+  font-weight: 500;
+}
+
+/* ======================================================
+   🌐 Smooth Interaction Polish
+====================================================== */
+
+.map-card:hover {
+  box-shadow: 0 4px 12px rgba(16, 24, 40, 0.06);
+  transition: box-shadow 0.25s ease;
+}
+
+.map-badge {
+  transition: all 0.2s ease;
+}
+
+.map-badge:hover {
+  background: #e5e7eb;
+}

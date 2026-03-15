@@ -1,0 +1,76 @@
+/* =========================================
+   EXECUTIVE BLOOMBERG-STYLE DESIGN SYSTEM
+   ========================================= */
+
+:root {
+  --bg-card: #ffffff;
+  --border-light: #e6e9ef;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+
+  --accent-energy: #2563eb;
+  --accent-finance: #059669;
+  --accent-ai: #7c3aed;
+  --accent-carbon: #16a34a;
+  --accent-danger: #dc2626;
+
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.exec-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.exec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.exec-title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.exec-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.exec-sub {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.exec-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.exec-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+}
+
+.exec-divider {
+  height: 1px;
+  background: var(--border-light);
+  margin: 16px 0;
+}
+
+.accent-energy { border-left: 4px solid var(--accent-energy); }
+.accent-finance { border-left: 4px solid var(--accent-finance); }
+.accent-ai { border-left: 4px solid var(--accent-ai); }
+.accent-carbon { border-left: 4px solid var(--accent-carbon); }
+.accent-danger { border-left: 4px solid var(--accent-danger); }

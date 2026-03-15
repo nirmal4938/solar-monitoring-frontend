@@ -1,0 +1,23 @@
+/* Root Layout */
+.app-layout {
+  display: flex;
+  height: 100vh;          /* FULL VIEWPORT */
+  overflow: hidden;       /* Prevent body scroll */
+  background: #0f172a;
+}
+
+/* Right side container */
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f1f5f9;
+  overflow: hidden;       /* Important */
+}
+
+/* Scrollable page content */
+.content-area {
+  flex: 1;
+  overflow-y: auto;       /* Only content scrolls */
+  padding: 28px;
+}

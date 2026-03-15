@@ -1,0 +1,56 @@
+@import "./sharedInverterStyles.css";
+
+.financial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.financial-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.financial-subtitle {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.finance-badge {
+  background: #111827;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.financial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.stat-card {
+  background: #f9fafb;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.positive .stat-value {
+  color: #059669;
+}

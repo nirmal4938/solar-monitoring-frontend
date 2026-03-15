@@ -1,0 +1,112 @@
+/* ================================
+   ALERT LIST STRUCTURED STYLE
+================================ */
+
+/* Wrapper */
+.alert-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Header */
+.alert-list-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Scroll area */
+.alert-list-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* Empty */
+.alert-empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+  height: 100%;
+  font-size: 13px;
+}
+
+/* Card */
+.rule-card {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.rule-card:hover {
+  border-color: #d1d5db;
+  background: #f9fafb;
+}
+
+.rule-card-active {
+  border-color: #111827;
+  background: #f3f4f6;
+}
+
+/* Top Row */
+.rule-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Left section */
+.rule-card-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+}
+
+/* Title */
+.rule-card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.rule-card-meta {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 3px;
+}
+
+/* Tags */
+.rule-card-tags {
+  display: flex;
+  gap: 6px;
+}
+
+/* Condition preview */
+.rule-card-condition {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+/* Actions */
+.rule-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+/* Make action buttons compact */
+.rule-card-actions .p-button {
+  width: 28px;
+  height: 28px;
+}
