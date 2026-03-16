@@ -18,7 +18,7 @@ export const UserListPage = () => {
   const dt = useRef(null);
 
   const { users = [], loading, deleteUser } = useEditUser();
-// console.log("users", users);
+  // console.log("users", users);
   const [selectedUsers, setSelectedUsers] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -29,12 +29,13 @@ export const UserListPage = () => {
   // ----------------------------------
   const activeCount = useMemo(
     () => safeUsers.filter((u) => u.is_active === true).length,
-    [safeUsers]
+    [safeUsers],
   );
 
   const filteredUsers = useMemo(() => {
     return safeUsers.filter((u) => {
-      const fullName = `${u.first_name || ""} ${u.last_name || ""}`.toLowerCase();
+      const fullName =
+        `${u.first_name || ""} ${u.last_name || ""}`.toLowerCase();
       return (
         fullName.includes(search.toLowerCase()) ||
         u.email?.toLowerCase().includes(search.toLowerCase())
@@ -48,8 +49,8 @@ export const UserListPage = () => {
 
   const nameTemplate = (row) => (
     <span style={{ fontWeight: 500 }}>
-       {row.name}
-       {/* {row.first_name} {row.last_name} || */}
+      {row.name}
+      {/* {row.first_name} {row.last_name} || */}
     </span>
   );
 
@@ -77,9 +78,7 @@ export const UserListPage = () => {
   };
 
   const formatDate = (row) =>
-    row.created_at
-      ? new Date(row.created_at).toLocaleDateString()
-      : "-";
+    row.created_at ? new Date(row.created_at).toLocaleDateString() : "-";
 
   const actionBodyTemplate = (rowData) => {
     const handleDelete = () => {
@@ -122,7 +121,11 @@ export const UserListPage = () => {
             icon="pi pi-eye"
             tooltip="View"
             className="p-button-rounded"
-            style={{ ...buttonStyle, backgroundColor: "#3b82f6", color: "#fff" }}
+            style={{
+              ...buttonStyle,
+              backgroundColor: "#3b82f6",
+              color: "#fff",
+            }}
             onClick={() => navigate(`/users/${rowData.id}`)}
           />
         )}
@@ -132,7 +135,11 @@ export const UserListPage = () => {
             icon="pi pi-pencil"
             tooltip="Edit"
             className="p-button-rounded"
-            style={{ ...buttonStyle, backgroundColor: "#f59e0b", color: "#fff" }}
+            style={{
+              ...buttonStyle,
+              backgroundColor: "#f59e0b",
+              color: "#fff",
+            }}
             onClick={() => navigate(`/users/${rowData._id}/edit`)}
           />
         )}
@@ -142,7 +149,11 @@ export const UserListPage = () => {
             icon="pi pi-trash"
             tooltip="Delete"
             className="p-button-rounded"
-            style={{ ...buttonStyle, backgroundColor: "#ef4444", color: "#fff" }}
+            style={{
+              ...buttonStyle,
+              backgroundColor: "#ef4444",
+              color: "#fff",
+            }}
             onClick={handleDelete}
           />
         )}
@@ -153,7 +164,7 @@ export const UserListPage = () => {
   // ----------------------------------
   // UI
   // ----------------------------------
-  console.log("loading", loading, filteredUsers)
+  // console.log("loading", loading, filteredUsers)
   return (
     <PageLayout title="User Management" showBack={false}>
       <Toast ref={toast} />
@@ -169,7 +180,7 @@ export const UserListPage = () => {
           <Button
             label="Export"
             icon="pi pi-download"
-            className="p-button-outlined p-button-sm"
+            className="p-button-outlined p-button-sm p-button-rounded"
             onClick={() => dt.current?.exportCSV?.()}
           />
 
@@ -177,7 +188,7 @@ export const UserListPage = () => {
             <Button
               label="Add User"
               icon="pi pi-plus"
-              className="p-button-sm"
+              className="p-button-sm p-button-rounded"
               style={{ background: "#1f3a8a", border: "none" }}
               onClick={() => navigate("/users/new")}
             />
@@ -254,7 +265,7 @@ export const UserListPage = () => {
 
           <Column
             header="Roles"
-              field="roles"
+            field="roles"
             body={roleTemplate}
             style={{ width: "250px" }}
           />

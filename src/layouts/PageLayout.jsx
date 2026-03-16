@@ -14,7 +14,7 @@ const PageLayout = ({ title, children, showBack = true }) => {
             <Button
               icon="pi pi-arrow-left"
               className="p-button-text p-button-sm"
-              style={{ padding: "4px 6px", marginLeft: "25px" }}
+              style={{ padding: "4px 6px", marginLeft: "2px" }}
               onClick={() => navigate(-1)}
             />
           )}

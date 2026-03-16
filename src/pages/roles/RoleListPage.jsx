@@ -33,7 +33,7 @@ export const RoleListPage = () => {
 
   const systemRoles = useMemo(
     () => safeRoles.filter((r) => r.is_system).length,
-    [safeRoles]
+    [safeRoles],
   );
 
   const customRoles = totalRoles - systemRoles;
@@ -51,8 +51,8 @@ export const RoleListPage = () => {
         typeFilter === null
           ? true
           : typeFilter === "SYSTEM"
-          ? r.is_system
-          : !r.is_system;
+            ? r.is_system
+            : !r.is_system;
 
       return matchesSearch && matchesType;
     });
@@ -161,7 +161,7 @@ export const RoleListPage = () => {
           <Button
             label="Export"
             icon="pi pi-download"
-            className="p-button-outlined p-button-sm"
+            className="p-button-outlined p-button-sm p-button-rounded"
             onClick={() => dt.current?.exportCSV?.()}
           />
 
@@ -169,7 +169,7 @@ export const RoleListPage = () => {
             <Button
               label="Add Role"
               icon="pi pi-plus"
-              className="p-button-sm"
+              className="p-button-sm p-button-rounded"
               style={{ background: "#1f3a8a", border: "none" }}
               onClick={() => navigate("/roles/new")}
             />
@@ -182,7 +182,7 @@ export const RoleListPage = () => {
         <span className="p-input-icon-left">
           <i className="pi pi-search" />
           <InputText
-            placeholder="Search role name or description..."
+            placeholder="Search"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="p-inputtext-sm"
